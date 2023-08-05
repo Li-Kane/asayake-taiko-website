@@ -1,0 +1,35 @@
+/* Making facebook icon blue */
+#facebook-icon {
+    filter: invert(33%) sepia(12%) saturate(2831%) hue-rotate(183deg) brightness(94%) contrast(85%);
+}
+
+.footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    padding: 10px 10px;
+}
+
+.icon-item {
+    width: auto;
+    height: 30px;
+}
+
+.icons {
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+/* Making mail icon blue */
+#mail-icon {
+    filter: invert(80%) sepia(35%) saturate(885%) hue-rotate(153deg) brightness(86%) contrast(91%);
+}
+
+/* Making youtube icon red */
+#youtube-icon {
+    filter: invert(28%) sepia(79%) saturate(1900%) hue-rotate(341deg) brightness(79%) contrast(95%);
+}
