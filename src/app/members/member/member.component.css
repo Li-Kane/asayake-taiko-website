@@ -1,0 +1,11 @@
+.asacard .alt {
+    display: none;
+}
+
+.asacard:hover .alt {
+    display: inline;
+}
+
+.asacard:hover .main {
+    display: none;
+}

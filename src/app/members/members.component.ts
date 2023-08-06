@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActiveComponentService } from '../active-component.service';
+import { gen22 } from './member-data';
 
 @Component({
   selector: 'app-members',
@@ -8,6 +9,7 @@ import { ActiveComponentService } from '../active-component.service';
 })
 export class MembersComponent implements OnInit{
   constructor(private activeComponentService: ActiveComponentService) {}
+  generation22 = gen22;
 
   ngOnInit() {
     this.activeComponentService.setActiveComponentName('members');

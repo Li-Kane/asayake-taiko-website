@@ -12,6 +12,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { MediaComponent } from './media/media.component';
 import { MembersComponent } from './members/members.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MemberComponent } from './members/member/member.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     GalleryComponent,
     MediaComponent,
     MembersComponent,
-    NavbarComponent
+    NavbarComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,
