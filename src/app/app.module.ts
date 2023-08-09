@@ -13,6 +13,7 @@ import { MediaComponent } from './media/media.component';
 import { MembersComponent } from './members/members.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './members/member/member.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MemberComponent } from './members/member/member.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [ActiveComponentService],
   bootstrap: [AppComponent]

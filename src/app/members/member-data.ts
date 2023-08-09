@@ -1,6 +1,15 @@
-import { Member } from "./member";
-//all the member data
+export interface Member {
+    main: String;
+    alt: String;
+    name: String;
+    major: String;
+    gen: number;
+    favSong: String;
+    quote: String;
+    state: "default" | "flipped" | "matched";
+}
 
+//all the member data
 export const a_omiya: Member = {
     main: "../../assets/members/gen22/a_omiya_main.jpg",
     alt: "../../assets/members/gen22/a_omiya_alt.jpg",
@@ -8,7 +17,8 @@ export const a_omiya: Member = {
     major: "idk",
     gen: 22,
     favSong: "ishi?",
-    quote: "BALLER"
+    quote: "BALLER",
+    state: "default"
 }
 export const j_shou: Member = {
     main: "../../assets/members/gen22/j_shou_main.jpg",
@@ -17,7 +27,8 @@ export const j_shou: Member = {
     major: "building?",
     gen: 22,
     favSong: "ishi?",
-    quote: "SHARK"
+    quote: "SHARK",
+    state: "default"
 }
 
 export const k_diep: Member = {
@@ -27,7 +38,8 @@ export const k_diep: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const k_li: Member = {
@@ -37,7 +49,8 @@ export const k_li: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const k_miyasaki: Member = {
@@ -47,7 +60,8 @@ export const k_miyasaki: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const k_villadelgado: Member = {
@@ -57,7 +71,8 @@ export const k_villadelgado: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const k_yanagi: Member = {
@@ -67,7 +82,8 @@ export const k_yanagi: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const m_alegrado: Member = {
@@ -77,7 +93,8 @@ export const m_alegrado: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const m_esmino: Member = {
@@ -87,7 +104,8 @@ export const m_esmino: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting",
+    state: "default"
 }
 
 export const t_hsiao: Member = {
@@ -97,7 +115,8 @@ export const t_hsiao: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting"
+    quote: "quoting is very long because I am smart and cool so yeah let's see how long this is",
+    state: "default"
 }
 
 export const gen22: Member[] = [a_omiya, j_shou, k_diep, k_li, k_miyasaki,
@@ -110,7 +129,8 @@ export const a_adriano: Member = {
     major: "idk",
     gen: 21,
     favSong: "funny song",
-    quote: "yes'm"
+    quote: "yes'm",
+    state: "default"
 }
 
 export const gen21: Member[] = [a_adriano];

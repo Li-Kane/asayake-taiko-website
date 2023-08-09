@@ -1,4 +1,43 @@
-<a class="asacard">
-    <img class="img-fluid main" src="{{person.main}}" alt="Person Photo">
-    <img class="img-fluid alt" src="{{person.alt}}" alt="Funny Person Photo">
-</a>
+<!--
+<div class="card asacard" (click)="flipCard()">
+    <div class="face back">
+        <img class="img-fluid main" src="{{person.main}}" alt="Person Photo">
+        <img class="img-fluid alt" src="{{person.alt}}" alt="Funny Person Photo">
+    </div>
+    <div class="face front">
+        <p slot="memberName">{{person.name}}</p>
+        <p slot="major">{{person.major}}</p>
+        <p slot="gen">{{person.gen}}</p>
+        <p slot="favSong">{{person.favSong}}</p>
+        <p slot="quote">{{person.quote}}</p>
+    </div>
+</div>
+-->
+
+<!--
+<div class="card" (click)="flipCard()" [@cardFlip]="person.state">
+    <div class="face back">
+      <img src="{{person.main}}" />
+    </div>
+    <div class="face front">
+      <img src="{{person.alt}}" />
+    </div>
+</div>
+-->
+
+
+<div class="card border-dark" (click)="flipCard()" [@cardFlip]="person.state">
+  <div class="face back" #cardFront>
+    <img class="main" src="{{person.main}}" alt="Person Photo">
+    <img class="alt" src="{{person.alt}}" alt="Funny Person Photo">
+  </div>
+  <div class="face front">
+    <h5 class="card-header">{{person.name}}</h5>
+    <div class="card-body">
+      <p>{{person.major}}</p>
+      <p>{{person.gen}}</p>
+      <p>{{person.favSong}}</p>
+      <p>{{person.quote}}</p>
+    </div>
+  </div>
+</div>
