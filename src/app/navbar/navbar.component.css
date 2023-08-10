@@ -21,7 +21,6 @@
     display:inline-block;
     width:30px;
     height:30px;
-    background-size: contain;
 } 
 
 .nav-text {
@@ -60,4 +59,10 @@
 
 .transparent #logo {
     display: none;
+}
+
+@media screen and (max-width: 992px){
+    .nav-text {
+        font-size: medium;
+    }
 }

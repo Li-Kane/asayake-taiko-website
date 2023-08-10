@@ -1,31 +1,4 @@
 <!--
-<div class="card asacard" (click)="flipCard()">
-    <div class="face back">
-        <img class="img-fluid main" src="{{person.main}}" alt="Person Photo">
-        <img class="img-fluid alt" src="{{person.alt}}" alt="Funny Person Photo">
-    </div>
-    <div class="face front">
-        <p slot="memberName">{{person.name}}</p>
-        <p slot="major">{{person.major}}</p>
-        <p slot="gen">{{person.gen}}</p>
-        <p slot="favSong">{{person.favSong}}</p>
-        <p slot="quote">{{person.quote}}</p>
-    </div>
-</div>
--->
-
-<!--
-<div class="card" (click)="flipCard()" [@cardFlip]="person.state">
-    <div class="face back">
-      <img src="{{person.main}}" />
-    </div>
-    <div class="face front">
-      <img src="{{person.alt}}" />
-    </div>
-</div>
--->
-
-
 <div class="card border-dark" (click)="flipCard()" [@cardFlip]="person.state">
   <div class="face back" #cardFront>
     <img class="main" src="{{person.main}}" alt="Person Photo">
@@ -38,6 +11,26 @@
       <p>{{person.gen}}</p>
       <p>{{person.favSong}}</p>
       <p>{{person.quote}}</p>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="card border-dark" (click)="flipCard()" [@cardFlip]="person.state">
+  <div class="face back" #cardFront>
+    <img class="main" src="{{person.main}}" alt="Person Photo">
+    <img class="alt" src="{{person.alt}}" alt="Funny Person Photo">
+  </div>
+  <div class="face front">
+    <div class="info" [class.isVisible]="isFlipped">
+      <h6 class="card-header">{{person.name}}</h6>
+      <div class="card-body py-1">
+        <p>Generation: {{person.gen}}<br><br>
+           Major: {{person.major}} <br><br>
+           Favorite Taiko Song: {{person.favSong}} <br><br>
+           "{{person.quote}}"
+        </p>
+      </div>
     </div>
   </div>
 </div>

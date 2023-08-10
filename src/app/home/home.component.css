@@ -1,5 +1,6 @@
+
 #big-logo {
-    height: 44vh;
+    width: 35%;
 }
 
 .gradient-overlay {
@@ -13,24 +14,13 @@
     z-index: 99;
 }
 
-.text-box {
-    width: 90%;
+.overlay {
+    margin: auto;
+    top: 80px; left: 50px;
+    bottom: 50px; right: 50px;
     color: white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 100;
-}
-
-.text-box h1 {
-    font-size: min(10vw, 120px);
-    font-weight: bold;
-}
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 25px;
-    color: white;
+    display: none;
 }

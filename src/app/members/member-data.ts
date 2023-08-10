@@ -115,7 +115,7 @@ export const t_hsiao: Member = {
     major: "idk",
     gen: 22,
     favSong: "matsuri",
-    quote: "quoting is very long because I am smart and cool so yeah let's see how long this is",
+    quote: "I love how the players are able to interact through their hits and movements to portray the story of the wind weasels. The complex rhythm makes the song very engaging, and it's just really fun to perform overall.",
     state: "default"
 }
 
@@ -133,4 +133,15 @@ export const a_adriano: Member = {
     state: "default"
 }
 
-export const gen21: Member[] = [a_adriano];
+export const a_meckert: Member = {
+    main: "../../assets/members/gen21/a_meckert_main.jpg",
+    alt: "../../assets/members/gen21/a_meckert_alt.jpg",
+    name: "Andrew Meckert",
+    major: "idk",
+    gen: 21,
+    favSong: "andrewy song",
+    quote: "NO'm",
+    state: "default"
+}
+
+export const gen21: Member[] = [a_adriano, a_meckert];

@@ -24,7 +24,7 @@ import {
         animate('400ms')
       ]),
       transition('flipped => default', [
-        animate('200ms')
+        animate('400ms')
       ])
     ])
   ]
@@ -32,16 +32,18 @@ import {
 export class MemberComponent {
   @Input() person: any;
   @ViewChild('cardFront') frontCard: any;
-  popup: Boolean = false;
+  isFlipped: Boolean = false;
 
 
   flipCard(){
     if (this.person.state === "default") {
       console.log(this.person.state);
       this.person.state = "flipped";
+      this.isFlipped = true;
     } else {
       console.log(this.person.state);
       this.person.state = "default";
+      this.isFlipped = false;
     }
   }
 
