@@ -20,15 +20,17 @@
   <div class="face back" #cardFront>
     <img class="main" src="{{person.main}}" alt="Person Photo">
     <img class="alt" src="{{person.alt}}" alt="Funny Person Photo">
+    <div class="card-img-overlay d-flex align-items-end p-0">
+      <div class="nametag container-fluid">
+        <h6>{{person.name}}</h6>
+      </div>
+    </div>
   </div>
   <div class="face front">
     <div class="info" [class.isVisible]="isFlipped">
-      <h6 class="card-header">{{person.name}}</h6>
       <div class="card-body py-1">
         <p>Generation: {{person.gen}}<br><br>
-           Major: {{person.major}} <br><br>
-           Favorite Taiko Song: {{person.favSong}} <br><br>
-           "{{person.quote}}"
+           "{{person.introduction}}"
         </p>
       </div>
     </div>

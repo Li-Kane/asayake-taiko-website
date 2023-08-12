@@ -12,6 +12,12 @@
   grid-template-columns: 1fr;
 }
 
+.card-footer {
+  position: relative !important;
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
 .card:hover .alt {
   display: inline;
 }
@@ -26,11 +32,8 @@
   grid-row-start: 1;
   grid-column-start: 1;
 }
-.front {
-  transform: rotateY(180deg);
-}
 
-img {
+.face img {
   object-fit: cover;
   border-radius: inherit;
   width: 100%;
@@ -38,9 +41,23 @@ img {
   position: relative;
 }
 
+.front {
+  transform: rotateY(180deg);
+}
+
 .info {
   line-height: 1;
   font-size: calc(large - 0.5vw);
+}
+
+.nametag {
+  height: 20px;
+  background-color:  #828181;
+  font-weight: bold;
+}
+
+.nametag h6 {
+  color: white;
 }
 
 /* Text resizing responsiveness for changing screen widths */
@@ -54,7 +71,7 @@ img {
 /* 3 members per line */
 @media screen and (min-width: 992px){
   .info {
-    font-size: calc(1.3vw - 1px);
+    font-size: calc(1.3vw - 2px);
   }
 }
 

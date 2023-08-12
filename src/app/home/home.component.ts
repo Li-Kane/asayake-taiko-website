@@ -12,16 +12,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.activeComponentService.setActiveComponentName('home');
-
-    //const myCarouselElement = document.querySelector('#myCarousel')
-
-    //myCarouselElement.bootstrap.cycle();
-
-    const testFolder = '../../assets/carousel';
-    //const fs = require('fs');
-
-    //fs.readdirSync(testFolder).forEach(file => {
-     // console.log(file);
-    //})
   }
 }

@@ -14,6 +14,9 @@ import { MembersComponent } from './members/members.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './members/member/member.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TaikoHistoryComponent } from './home/taiko-history/taiko-history.component';
+import { ConcertComponent } from './home/concert/concert.component';
+import { RepertoireComponent } from './home/repertoire/repertoire.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MediaComponent,
     MembersComponent,
     NavbarComponent,
-    MemberComponent
+    MemberComponent,
+    TaikoHistoryComponent,
+    ConcertComponent,
+    RepertoireComponent
   ],
   imports: [
     BrowserModule,
