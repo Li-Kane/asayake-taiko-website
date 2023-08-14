@@ -12,12 +12,6 @@
   grid-template-columns: 1fr;
 }
 
-.card-footer {
-  position: relative !important;
-  grid-row-start: 2;
-  grid-column-start: 1;
-}
-
 .card:hover .alt {
   display: inline;
 }
@@ -78,6 +72,6 @@
 /* 4 members per line */
 @media screen and (min-width: 1200px){
   .info {
-    font-size: calc(1.3vw - 6px);
+    font-size: calc(1.3vw - 6.5px);
   }
 }

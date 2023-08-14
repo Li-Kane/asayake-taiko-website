@@ -13,4 +13,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.activeComponentService.setActiveComponentName('home');
   }
+
+  resetPosition() {
+    let myDiv = document.getElementById("concert-container");
+    if (myDiv === null) {
+      alert('oops');
+    } else {
+      myDiv.scrollTop = 0;
+    }
+  }
 }

@@ -18,6 +18,15 @@
       <div class="carousel-item">
         <img src="../../assets/carousel/carousel_5.jpg" class="d-block w-100 img-fluid" alt="...">
       </div>
+      <div class="carousel-item">
+        <img src="../../assets/carousel/carousel_6.jpg" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/carousel/carousel_7.jpg" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/carousel/carousel_8.jpg" class="d-block w-100 img-fluid" alt="...">
+      </div>
     </div>
   </div>
   <div class="overlay">
@@ -33,7 +42,7 @@
   <div class="asayake-block image-button col-4 px-2">
     <div class="img-wrapper">
       <img class="img-fluid rounded" src="../../assets/images/home-square1.jpg" alt="Home Square 1">
-      <a class="img-description text-center" routerLink="/concert" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <a class="img-description text-center" routerLink="/concert" routerLinkActive="active" ariaCurrentWhenActive="page" (activate)="resetPosition()">
         <h3>Concert</h3>
       </a>
     </div>
@@ -41,8 +50,8 @@
   <div class="asayake-block col-4 px-2">
     <div class="img-wrapper">
       <img class="img-fluid rounded" src="../../assets/images/home-square2.jpg" alt="Home Square 2">
-      <a class="img-description text-center" routerLink="/repertoire" routerLinkActive="active" ariaCurrentWhenActive="page">
-        <h3>Repertoire</h3>
+      <a class="img-description text-center" routerLink="/website-development" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <h3>Website Development</h3>
       </a>
     </div>
   </div>
