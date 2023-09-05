@@ -40,6 +40,12 @@
   </button>
 </div>
 <h2 class="text-center">Gallery</h2>
-<button>
+<button (click)="displayEnlarged($event)">
   <img class="col-12 col-md-6 col-lg-4 col-xl-3 p-2" *ngFor='let url of preloadImageUrls' [src]="url" [alt]="url">
 </button>
+<div class="enlarge-section" *ngIf="showEnlarged">
+  <img id="enlargedImg" [src]="imgSrc" alt="enlarged" />
+  <button (click)="closeEnlarged()">
+    <img src="../../assets/icons/asayake_logo.png" alt="close" />
+  </button>
+</div>
