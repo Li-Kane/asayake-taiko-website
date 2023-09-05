@@ -1,0 +1,36 @@
+.align-items-center {
+    display: flex; 
+    align-items: center;  /*Aligns vertically center */
+    justify-content: center; /*Aligns horizontally center */
+  }
+
+.caption {
+    background-color: darkgrey;
+    height: 40px;
+}
+
+.carousel {
+    width: 70% !important;
+    height: auto;
+    left: 15%;
+}
+
+.carousel-control-next {
+    right: -14%;
+}
+
+.carousel-control-prev {
+    left: -14%;
+}
+
+.icon-background {
+    background-color: rgb(0, 0, 0);
+    width: 45px;
+    height: 80px;
+}
+
+.youtube-video {
+    aspect-ratio: 16/9;
+    width: 100%;
+    display: block;
+}
