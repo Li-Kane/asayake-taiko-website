@@ -15,7 +15,7 @@ import { MemberComponent } from './members/member/member.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TaikoHistoryComponent } from './home/taiko-history/taiko-history.component';
 import { ConcertComponent } from './home/concert/concert.component';
-import { WebsiteDevelopmentComponent } from './home/website-development/website-development.component';
+import { AlumniComponent } from './home/alumni/alumni.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MemberComponent,
     TaikoHistoryComponent,
     ConcertComponent,
-    WebsiteDevelopmentComponent,
+    AlumniComponent,
     PageNotFoundComponent
   ],
   imports: [

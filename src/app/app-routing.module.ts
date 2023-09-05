@@ -7,7 +7,7 @@ import { MembersComponent } from './members/members.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TaikoHistoryComponent } from './home/taiko-history/taiko-history.component';
 import { ConcertComponent } from './home/concert/concert.component';
-import { WebsiteDevelopmentComponent } from './home/website-development/website-development.component';
+import { AlumniComponent} from './home/alumni/alumni.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent},
   { path: 'taiko-history', component: TaikoHistoryComponent},
   { path: 'concert', component: ConcertComponent},
-  { path: 'website-development', component: WebsiteDevelopmentComponent},
+  { path: 'alumni', component: AlumniComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

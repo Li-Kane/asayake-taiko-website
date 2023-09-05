@@ -2,6 +2,12 @@
 <div id="carouselExampleCaptions" class="carousel slide border border-4 border-black">
   <div class="carousel-inner">
     <div class="carousel-item active">
+      <iframe class="youtube-video" src="https://www.youtube.com/embed/Ui_6sTu3qW8?si=SlK5SjmHiVqi0YWV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="caption align-items-center">
+          <h6>Asayake Taiko Most Recent Concert</h6>
+      </div>
+    </div>
+    <div class="carousel-item">
       <iframe class="youtube-video" src="https://www.youtube.com/embed/HlyDT39byVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <div class="caption align-items-center">
           <h6>Asayake Trailer Video from 2019</h6>
@@ -33,4 +39,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<h2 class="text-center">Images</h2>
+<h2 class="text-center">Gallery</h2>
+<button>
+  <img class="col-12 col-md-6 col-lg-4 col-xl-3 p-2" *ngFor='let url of preloadImageUrls' [src]="url" [alt]="url">
+</button>
