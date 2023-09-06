@@ -14,6 +14,7 @@ article {
 .connect-item a {
     text-decoration: none;
     color: black;
+    font-size: 1.2em;
 }
 
 .connect-item a:hover {
@@ -21,8 +22,8 @@ article {
 }
 
 .follow-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     color: black;
 }
 
