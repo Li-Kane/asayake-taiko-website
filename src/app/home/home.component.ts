@@ -50,9 +50,9 @@ export class HomeComponent implements OnInit {
     //Wait a bit so state doesn't change before page is loaded
     setTimeout(() => {
       this.logoState = 'end';
-    }, 3000);
+    }, 4000);
     setTimeout(() => {
       this.textState = 'end';
-    }, 7000);
+    }, 8000);
   }
 }
