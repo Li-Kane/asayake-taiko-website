@@ -1,12 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild, Renderer2, ElementRef} from '@angular/core';
 import { ActiveComponentService } from '../active-component.service';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import {trigger, state, style, animate, transition, AnimationEvent} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -15,13 +9,27 @@ import {
   animations: [
     trigger('moveAndShrink', [
       state('start', style({
-        transform: 'translate(0, 0) scale(1)'
+        //transform: 'translate(0, 0) scale(1)'
+        width: '34%',
+        left: '33%',
+        top: '8%',
       })),
       state('end', style({
-        transform: 'translate(-100%, -100%) scale(0.8)'
+        width: '130px',
+        left: '2%',
+        top: '2%',
       })),
-      transition('start => end', animate('6000ms ease-in-out')),
+      transition('start => end', animate('5000ms ease-in-out')),
     ]),
+    trigger('leftFlowIn', [
+      state('start', style({
+        opacity: '0'
+      })),
+      state('end', style({
+        opacity: '1'
+      })),
+      transition('start => end', animate('1000ms linear')),
+    ])
   ]
 })
 
@@ -31,13 +39,20 @@ export class HomeComponent implements OnInit {
   //Need to subtract one for the active carousel div
   numImages = 14 - 1;
   imageUrls = [...Array(this.numImages).keys()].map((key) => `../../assets/carousel/carousel_${key+1}.webp`);
+  imageIdxs = [...Array(this.numImages).keys()].map((key) => (key + 1));
 
-  animationState = 'start';
+  //Animation variables
+  logoState = 'start';
+  textState = 'start';
 
   ngOnInit() {
     this.activeComponentService.setActiveComponentName('home');
+    //Wait a bit so state doesn't change before page is loaded
     setTimeout(() => {
-      this.animationState = 'end';
-    }, 100);
+      this.logoState = 'end';
+    }, 1000);
+    setTimeout(() => {
+      this.textState = 'end';
+    }, 6000);
   }
 }

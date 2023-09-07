@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/* https://www.telerik.com/blogs/angular-basics-how-best-use-fonts-angular font tutorial */
+@font-face {
+    font-family: 'Anton';
+    src: url('./assets/fonts/Anton-Regular.ttf');
+  }

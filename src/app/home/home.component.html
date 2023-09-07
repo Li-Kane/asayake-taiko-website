@@ -13,19 +13,30 @@
         <img src="../../assets/carousel/carousel_0.webp" class="d-block w-100" alt="...">
       </div>
       <div *ngFor="let imageUrl of imageUrls" class="carousel-item">
-        <img [src]="imageUrl" class="d-block w-100" alt="..."/>
+          <img [src]="imageUrl" class="d-block w-100" alt="..."/>
       </div>
-      <div [@moveAndShrink]="animationState" class="big-logo-container">
+      <div [@moveAndShrink]="logoState" class="big-logo-container">
+        <a href="/" ariaCurrentWhenActive="page">
+          <img src="../../assets/icons/asa_icon.png" id="big-logo" class="img-fluid">
+        </a>
+      </div>
+      <div class="description-container">
+        <h1 [@leftFlowIn]="textState">ASAYAKE TAIKO</h1>
+        <p [@leftFlowIn]="textState">Founded in the spring of 2002 at the University of California,
+          San Diego, Our mission statement is to increase Japanese
+          cultural awareness both within and outside of the UCSD
+          community through the art of taiko.</p>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
+      <button *ngFor="let i of imageIdxs; let index = index" 
+        type="button" 
+        [attr.data-bs-target]="'#carouselAutoplaying'" 
+        [attr.data-bs-slide-to]="i" 
+        [attr.aria-label]="'Slide ' + i">
+      </button>
+    </div>
   </div>
   <div class="homeinfo row m-2">
     <div class="asayake-block image-button col-4 px-2">

@@ -31,3 +31,23 @@
     background-color: rgb(112, 3, 3);
     left: .1em;
 }
+
+/* For smaller screens, place images under menu */
+@media screen and (max-width: 767px) {
+    .alumni-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-menu {
+        width: 100%;
+    }
+
+    .right-content {
+        width: 100%;
+
+        >img {
+            width: 100%;
+        }
+    }
+}
