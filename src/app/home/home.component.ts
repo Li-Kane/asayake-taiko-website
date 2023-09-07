@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, Renderer2, ElementRef} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActiveComponentService } from '../active-component.service';
-import {trigger, state, style, animate, transition, AnimationEvent} from '@angular/animations';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +19,7 @@ import {trigger, state, style, animate, transition, AnimationEvent} from '@angul
         left: '2%',
         top: '2%',
       })),
-      transition('start => end', animate('5000ms ease-in-out')),
+      transition('start => end', animate('5000ms ease-in-out'))
     ]),
     trigger('leftFlowIn', [
       state('start', style({
@@ -28,7 +28,7 @@ import {trigger, state, style, animate, transition, AnimationEvent} from '@angul
       state('end', style({
         opacity: '1'
       })),
-      transition('start => end', animate('1000ms linear')),
+      transition('start => end', animate('1000ms linear'))
     ])
   ]
 })

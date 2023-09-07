@@ -17,6 +17,7 @@ import { TaikoHistoryComponent } from './home/taiko-history/taiko-history.compon
 import { ConcertComponent } from './home/concert/concert.component';
 import { AlumniComponent } from './home/alumni/alumni.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [ActiveComponentService],
   bootstrap: [AppComponent]
