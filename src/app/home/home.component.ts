@@ -19,7 +19,7 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
         left: '2%',
         top: '2%',
       })),
-      transition('start => end', animate('5000ms ease-in-out'))
+      transition('start => end', animate('4000ms ease-in-out'))
     ]),
     trigger('leftFlowIn', [
       state('start', style({
@@ -50,9 +50,9 @@ export class HomeComponent implements OnInit {
     //Wait a bit so state doesn't change before page is loaded
     setTimeout(() => {
       this.logoState = 'end';
-    }, 1000);
+    }, 3000);
     setTimeout(() => {
       this.textState = 'end';
-    }, 6000);
+    }, 7000);
   }
 }

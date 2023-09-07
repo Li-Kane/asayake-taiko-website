@@ -1,6 +1,13 @@
 <body>
-    <app-navbar></app-navbar>
-    <!-- router-outlet is where navbar components are rendered-->
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <div *ngIf="isLoading()" class="lds-body">
+        <div class="lds-circle">
+          <div></div>
+        </div>
+    </div>
+    <div *ngIf="!isLoading()">
+        <app-navbar></app-navbar>
+        <!-- router-outlet is where navbar components are rendered-->
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
 </body>

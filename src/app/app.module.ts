@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ActiveComponentService } from './active-component.service';
+import { NgOptimizedImage } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,16 @@ import { ConcertComponent } from './home/concert/concert.component';
 import { AlumniComponent } from './home/alumni/alumni.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoadingService } from './loading.service';
+
+function initializeApp(loadingService: LoadingService) {
+  return () => {
+    //Display loading page for set time before starting
+    setTimeout(() => {
+      loadingService.setLoading(false);
+    }, 2000); 
+  };
+}
 
 @NgModule({
   declarations: [
@@ -39,9 +50,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    NgOptimizedImage
   ],
-  providers: [ActiveComponentService],
+  providers: [
+    ActiveComponentService,
+    {
+      provide: APP_INITIALIZER,
+        useFactory: initializeApp,
+        multi: true,
+        deps: [LoadingService],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,8 @@
+#big-logo {
+    animation: fade-in 3000ms;
+    animation-timing-function: linear;
+}
+
 .big-logo-container {
     position: absolute;
     z-index: 1000;
@@ -54,6 +59,15 @@
     }
 }
 
+#firstCarouselItem {
+    animation: fade-in 3000ms;
+    animation-timing-function: linear;
+}
+
+#homepage {
+    background-color: #071933;
+}
+
 .img-description {
     position: absolute;
     width: 100%;
@@ -78,6 +92,16 @@
 .img-wrapper:hover .img-description {
     visibility: visible;
     opacity: 1;
+}
+
+/* Have first items fade in a bit so less awkward looking*/
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
 
 /* For smaller screens, place description-container under logo-container */
