@@ -3,16 +3,31 @@
   <h1 class="text-center">Alumni</h1>
   <div class="alumni-content d-flex container-fluid">
     <ul class="left-menu rounded">
-      <li *ngFor="let alumni of alumnis" class="year-item container-fluid">
-        <button type="button" (click)="onSelect(alumni)" class="container-fluid">
-          <h5>{{alumni.year}}</h5>
-        </button>
-      </li>
+      <!-- Turn menu into dropdown upon a small screen size-->
+      <ng-template [ngIf]="screenWidth > 767" [ngIfElse]="narrowScreen">
+          <button type="button" *ngFor="let alumni of alumnis; let i=index" class="year-item container-fluid menu-btn"
+          (click)="onSelect($event, alumni)" [class.active]="i === activeIndex" [attr.id]="i">
+            {{alumni.year}}
+          </button>
+      </ng-template>
+      <ng-template #narrowScreen>
+        <div ngbDropdown>
+          <button type="button" class="year-item container-fluid" id="dropdown" ngbDropdownToggle>
+            {{selectedAlumni.year}}
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdown" id="dropdownMenu"> 
+            <button *ngFor="let alumni of alumnis; let i=index" class="year-item container-fluid" type="button"
+            (click)="onSelect($event, alumni)" ngbDropdownItem>
+              {{alumni.year}}
+            </button>
+          </div>
+        </div>
+      </ng-template>
     </ul>
     <div *ngIf="selectedAlumni" class="right-content text-center">
       <img *ngIf="selectedAlumni.image" src="../../../assets/members/alumni/{{selectedAlumni.year}}.jpg" alt="{{selectedAlumni.year}}"/>
       <div class="row mt-3">
-        <div class="col-xl-3 col-lg-4 w-80" *ngFor="let member of selectedAlumni.members">
+        <div class="col-xl-3 col-lg-4 col-sm-6 w-80" *ngFor="let member of selectedAlumni.members">
           <p class="border-bottom">{{member}}</p>
         </div>
       </div>

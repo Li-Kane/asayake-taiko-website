@@ -1,10 +1,25 @@
+.active {
+    background-color: rgb(112, 3, 3);
+}
+
 .alumni-container {
     margin: 5%;
+}
+
+#dropdownMenu {
+    height: 400px;
+    width: 100%;
+    overflow: scroll;
 }
 
 .left-menu {
     width: 30%;
     position: relative;
+    padding: 0px;
+}
+
+.menu-btn {
+    height: 40px;
 }
 
 .right-content {
