@@ -19,7 +19,7 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
         left: '2%',
         top: '2%',
       })),
-      transition('start => end', animate('4000ms ease-in-out'))
+      transition('start => end', animate('3000ms ease-in-out'))
     ]),
     trigger('leftFlowIn', [
       state('start', style({
@@ -53,6 +53,6 @@ export class HomeComponent implements OnInit {
     }, 4000);
     setTimeout(() => {
       this.textState = 'end';
-    }, 8000);
+    }, 7000);
   }
 }

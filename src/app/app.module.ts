@@ -26,7 +26,7 @@ function initializeApp(loadingService: LoadingService) {
     //Display loading page for set time before starting
     setTimeout(() => {
       loadingService.setLoading(false);
-    }, 2000); 
+    }, 3000); 
   };
 }
 
