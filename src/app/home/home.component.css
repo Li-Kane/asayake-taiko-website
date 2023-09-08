@@ -1,3 +1,7 @@
+#big-logo {
+    animation: fade-in 3000ms;
+    animation-timing-function: linear;
+}
 
 .big-logo-container {
     position: absolute;
