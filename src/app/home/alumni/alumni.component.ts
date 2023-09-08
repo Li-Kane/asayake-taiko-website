@@ -33,9 +33,9 @@ export class AlumniComponent {
 
   onSelect(event: Event, alumni: Alumni) {
     this.selectedAlumni = alumni;
+    let target = event.target as Element;
+    this.activeIndex = +target.id;
     if(this.screenWidth > 767){
-      let target = event.target as Element;
-      this.activeIndex = +target.id;
       let menuBtns = document.querySelectorAll(".year-item");
       menuBtns.forEach(function(btn) {
         btn.setAttribute("class", "year-item container-fluid menu-btn");

@@ -1,5 +1,6 @@
 .active {
     background-color: rgb(112, 3, 3);
+    color: white;
 }
 
 .alumni-container {
@@ -19,7 +20,7 @@
 }
 
 .menu-btn {
-    height: 40px;
+    height: 35px;
 }
 
 .right-content {
