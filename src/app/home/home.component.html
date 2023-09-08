@@ -15,7 +15,7 @@
     </ng-template>
   </ngb-carousel>
   <div [@moveAndShrink]="logoState" class="big-logo-container">
-    <a href="/" ariaCurrentWhenActive="page">
+    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
       <img ngSrc="../../assets/icons/asa_icon.png" id="big-logo" class="img-fluid"
         width="600" height="600" priority/>
     </a>
