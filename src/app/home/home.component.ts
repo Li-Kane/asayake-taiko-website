@@ -1,6 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { ActiveComponentService } from '../active-component.service';
 import {trigger, state, style, animate, transition} from '@angular/animations';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
         top: '8%',
       })),
       state('end', style({
-        width: '130px',
+        width: 'calc(80px + 4%)',
         left: '2%',
         top: '2%',
       })),
@@ -38,8 +39,8 @@ export class HomeComponent implements OnInit {
 
   //Need to subtract one for the active carousel div
   numImages = 14 - 1;
-  imageUrls = [...Array(this.numImages).keys()].map((key) => `../../assets/carousel/carousel_${key+1}.webp`);
-  imageIdxs = [...Array(this.numImages).keys()].map((key) => (key + 1));
+  imageUrls = [...Array(this.numImages).keys()].map((key) => `../../assets/carousel/carousel_${key + 1}.webp`);
+  @ViewChild("carouselAutoPlaying") carousel?: NgbCarousel;
 
   //Animation variables
   logoState = 'start';
@@ -48,6 +49,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.activeComponentService.setActiveComponentName('home');
     //Wait a bit so state doesn't change before page is loaded
+    this.carousel?.cycle();
     setTimeout(() => {
       this.logoState = 'end';
     }, 4000);

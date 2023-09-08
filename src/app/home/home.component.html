@@ -1,37 +1,31 @@
 <!-- Thanks to Darryl Tayag for the homepage inspiration! https://github.com/djtayag/darryl_is_sexy-->
 <div id="homepage">
-  <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="8000">
-    <div class="carousel-inner">
-      <div class="carousel-item active" id="firstCarouselItem">
-        <img ngSrc="../../assets/carousel/carousel_0.webp" class="d-block w-100" alt="..."
-          width="2500" height="1667" priority/>
+  <ngb-carousel *ngIf="imageUrls" class="carousel" id="carouselAutoplaying"
+    [showNavigationArrows]="false" [interval]="8000" [keyboard]="true" [pauseOnHover]="false" [pauseOnFocus]="false">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img ngSrc="../../assets/carousel/carousel_0.webp" class="d-block w-100" alt="Slide 0"
+          width="2500" height="1667" sizes="100vw" priority/>
       </div>
-      <div *ngFor="let imageUrl of imageUrls" class="carousel-item">
-          <img [src]="imageUrl" class="d-block w-100" alt="..."/>
+    </ng-template>
+    <ng-template ngbSlide *ngFor="let imageUrl of imageUrls; let i = index">
+      <div class="picsum-img-wrapper">
+        <img [src]="imageUrl" [alt]="'Slide ' + (i + 2)" />
       </div>
-      <div [@moveAndShrink]="logoState" class="big-logo-container">
-        <a href="/" ariaCurrentWhenActive="page">
-          <img ngSrc="../../assets/icons/asa_icon.png" id="big-logo" class="img-fluid"
-            width="600" height="600" priority/>
-        </a>
-      </div>
-      <div class="description-container">
-        <h1 [@leftFlowIn]="textState">ASAYAKE TAIKO</h1>
-        <p [@leftFlowIn]="textState">Founded in the spring of 2002 at the University of California,
-          San Diego, Our mission statement is to increase Japanese
-          cultural awareness both within and outside of the UCSD
-          community through the art of taiko.</p>
-      </div>
-    </div>
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
-      <button *ngFor="let i of imageIdxs; let index = index" 
-        type="button" 
-        [attr.data-bs-target]="'#carouselAutoplaying'" 
-        [attr.data-bs-slide-to]="i" 
-        [attr.aria-label]="'Slide ' + i">
-      </button>
-    </div>
+    </ng-template>
+  </ngb-carousel>
+  <div [@moveAndShrink]="logoState" class="big-logo-container">
+    <a href="/" ariaCurrentWhenActive="page">
+      <img ngSrc="../../assets/icons/asa_icon.png" id="big-logo" class="img-fluid"
+        width="600" height="600" priority/>
+    </a>
+  </div>
+  <div class="description-container">
+    <h1 [@leftFlowIn]="textState">ASAYAKE TAIKO</h1>
+    <p [@leftFlowIn]="textState">Founded in the spring of 2002 at the University of California,
+      San Diego, Our mission statement is to increase Japanese
+      cultural awareness both within and outside of the UCSD
+      community through the art of taiko.</p>
   </div>
   <div class="homeinfo row">
     <div class="asayake-block image-button col-4 p-2">

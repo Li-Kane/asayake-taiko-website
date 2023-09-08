@@ -1,7 +1,7 @@
 <!-- Thanks to Hiroko Kakitani for Navbar design: https://github.com/HirotoKakitani/Asayake-website.git -->
 <nav class="navbar navbar-dark navbar-expand-lg custom-navbar" [class.transparent]="isTransparent">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/" ariaCurrentWhenActive="page">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
       <img class="img-fluid logo" src="../../assets/icons/banner.png" alt="Navbar Logo" id="logo">
     </a>
     <!-- Button that toggles navbar when screen size shrinks-->
@@ -10,7 +10,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link nav-text underline-animation my-2 py-0" href="/" ariaCurrentWhenActive="page">Home</a>
+        <a class="nav-link nav-text underline-animation my-2 py-0" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
         <a class="nav-link nav-text underline-animation my-2 py-0" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
         <a class="nav-link nav-text underline-animation my-2 py-0" routerLink="/media" routerLinkActive="active" ariaCurrentWhenActive="page">Media</a>
         <a class="nav-link nav-text underline-animation my-2 py-0" routerLink="/members" routerLinkActive="active" ariaCurrentWhenActive="page">Members</a>
